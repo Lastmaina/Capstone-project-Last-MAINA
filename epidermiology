@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNsW23qjOprThs7wTJedz32",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Lastmaina/Capstone-project-Last-MAINA/blob/main/epidermiology\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 467
+        },
+        "id": "gu4r4dk05g4V",
+        "outputId": "79e790df-c7ac-4b86-dabf-36f19e475539"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "DataSourceError",
+          "evalue": "polio_outbreaks.shp: No such file or directory",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mDataSourceError\u001b[0m                           Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-200141527.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m \u001b[0;31m# Load poliooutbreaks data\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m \u001b[0mpolio_gdf\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mgpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_file\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"polio_outbreaks.shp\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     10\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;31m# Load population density data\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/geopandas/io/file.py\u001b[0m in \u001b[0;36m_read_file\u001b[0;34m(filename, bbox, mask, columns, rows, engine, **kwargs)\u001b[0m\n\u001b[1;32m    314\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    315\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mengine\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"pyogrio\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 316\u001b[0;31m         return _read_file_pyogrio(\n\u001b[0m\u001b[1;32m    317\u001b[0m             \u001b[0mfilename\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mbbox\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mbbox\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmask\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mmask\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcolumns\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcolumns\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mrows\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mrows\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    318\u001b[0m         )\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/geopandas/io/file.py\u001b[0m in \u001b[0;36m_read_file_pyogrio\u001b[0;34m(path_or_bytes, bbox, mask, rows, **kwargs)\u001b[0m\n\u001b[1;32m    574\u001b[0m         \u001b[0mkwargs\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"columns\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mkwargs\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpop\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"include_fields\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    575\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 576\u001b[0;31m     \u001b[0;32mreturn\u001b[0m \u001b[0mpyogrio\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_dataframe\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mpath_or_bytes\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mbbox\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mbbox\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    577\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    578\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/pyogrio/geopandas.py\u001b[0m in \u001b[0;36mread_dataframe\u001b[0;34m(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, fid_as_index, use_arrow, on_invalid, arrow_to_pandas_kwargs, **kwargs)\u001b[0m\n\u001b[1;32m    273\u001b[0m         \u001b[0;31m# as numpy does not directly support timezones.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    274\u001b[0m         \u001b[0mkwargs\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"datetime_as_string\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 275\u001b[0;31m     result = read_func(\n\u001b[0m\u001b[1;32m    276\u001b[0m         \u001b[0mpath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    277\u001b[0m         \u001b[0mlayer\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mlayer\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/pyogrio/raw.py\u001b[0m in \u001b[0;36mread\u001b[0;34m(path_or_buffer, layer, encoding, columns, read_geometry, force_2d, skip_features, max_features, where, bbox, mask, fids, sql, sql_dialect, return_fids, datetime_as_string, **kwargs)\u001b[0m\n\u001b[1;32m    196\u001b[0m     \u001b[0mdataset_kwargs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0m_preprocess_options_key_value\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0mkwargs\u001b[0m \u001b[0;32melse\u001b[0m \u001b[0;34m{\u001b[0m\u001b[0;34m}\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    197\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 198\u001b[0;31m     return ogr_read(\n\u001b[0m\u001b[1;32m    199\u001b[0m         \u001b[0mget_vsi_path_or_buffer\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mpath_or_buffer\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    200\u001b[0m         \u001b[0mlayer\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mlayer\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32mpyogrio/_io.pyx\u001b[0m in \u001b[0;36mpyogrio._io.ogr_read\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mpyogrio/_io.pyx\u001b[0m in \u001b[0;36mpyogrio._io.ogr_open\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mDataSourceError\u001b[0m: polio_outbreaks.shp: No such file or directory"
+          ]
+        }
+      ],
+      "source": [
+        "import geopandas as gpd\n",
+        "import pandas as pd\n",
+        "import folium\n",
+        "import rasterio\n",
+        "import seaborn as sns\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Load poliooutbreaks data\n",
+        "polio_gdf = gpd.read_file(\"polio_outbreaks.shp\")\n",
+        "\n",
+        "# Load population density data\n",
+        "pop_gdf = gpd.read_file(\"population_density.shp\")\n",
+        "\n",
+        "# Load admin boundaries\n",
+        "admin_gdf = gpd.read_file(\"nigeria_LGA_boundaries.shp\")"
+      ]
+    }
+  ]
+}
